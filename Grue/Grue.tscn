@@ -7,7 +7,8 @@
 radius = 2.0
 
 [sub_resource type="SpatialMaterial" id=4]
-albedo_color = Color( 0, 0.627451, 0.113725, 1 )
+albedo_color = Color( 0.356863, 0.368627, 0.360784, 1 )
+metallic = 1.0
 
 [sub_resource type="CylinderMesh" id=5]
 material = SubResource( 4 )

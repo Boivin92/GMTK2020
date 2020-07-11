@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Fence.fbx-a233cd226eb15135a2085f23c328212f.scn"
+path="res://.import/Fence_2.fbx-c7c0e60b78c1ada6429e972e523965ca.scn"
 
 [deps]
 
-source_file="res://Boat/Fence.fbx"
-dest_files=[ "res://.import/Fence.fbx-a233cd226eb15135a2085f23c328212f.scn" ]
+source_file="res://Boat/Fences/Fence_2.fbx"
+dest_files=[ "res://.import/Fence_2.fbx-c7c0e60b78c1ada6429e972e523965ca.scn" ]
 
 [params]
 

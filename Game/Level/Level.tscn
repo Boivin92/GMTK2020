@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Grue/Grue.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Boat/boat2.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Cargo/SpawningZones/CrateSpawningZone.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Boat/Fences/Fence.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Boat/boat_big.gd" type="Script" id=5]
 [ext_resource path="res://Game/Level/water.tres" type="Material" id=6]
 [ext_resource path="res://Game/Level/Wave.tscn" type="PackedScene" id=7]
@@ -21,38 +22,66 @@ extents = Vector3( 99.4718, 26.3844, 87.3494 )
 [node name="Level" type="Spatial"]
 script = ExtResource( 9 )
 
-[node name="boat2" parent="." instance=ExtResource( 2 )]
+[node name="boat" parent="." instance=ExtResource( 2 )]
 script = ExtResource( 5 )
 
-[node name="Grue" parent="boat2" instance=ExtResource( 1 )]
+[node name="Grue" parent="boat" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0240302, 6.0001, 5.10777 )
 
-[node name="SpotLight" type="SpotLight" parent="boat2"]
+[node name="SpotLight" type="SpotLight" parent="boat"]
 transform = Transform( -0.979445, 0.108115, -0.170289, -4.68576e-08, 0.844225, 0.535989, 0.201711, 0.524972, -0.826872, 3.17265, 9.84154, -2.08678 )
 light_energy = 3.0
 spot_range = 13.3769
 spot_angle = 63.6524
 
-[node name="SpotLight2" type="SpotLight" parent="boat2"]
+[node name="SpotLight2" type="SpotLight" parent="boat"]
 transform = Transform( -0.979445, -0.108115, 0.170289, 0, 0.844225, 0.535989, -0.20171, 0.524972, -0.826872, -2.82905, 9.84154, -2.08678 )
 light_energy = 3.0
 spot_range = 13.3769
 spot_angle = 67.7892
 
+[node name="Spatial" type="Spatial" parent="boat"]
+
+[node name="Fence" parent="boat/Spatial" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.01687, 5.47231, 7.18633 )
+
+[node name="Fence2" parent="boat/Spatial" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.01687, 5.47231, 5.92949 )
+
+[node name="Fence3" parent="boat/Spatial" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.01687, 5.47231, 2.21066 )
+
+[node name="Fence4" parent="boat/Spatial" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.01687, 5.47231, 0.876344 )
+
+[node name="Fence5" parent="boat/Spatial" instance=ExtResource( 4 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, -6.31035, 5.47231, 7.18633 )
+
+[node name="Fence6" parent="boat/Spatial" instance=ExtResource( 4 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, -6.31035, 5.47231, 5.92949 )
+
+[node name="Fence7" parent="boat/Spatial" instance=ExtResource( 4 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, -6.31035, 5.47231, 2.21066 )
+
+[node name="Fence8" parent="boat/Spatial" instance=ExtResource( 4 )]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, -6.31035, 5.47231, 0.876344 )
+
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( -1, -2.49609e-07, 2.09447e-07, 0, 0.642788, 0.766044, -3.25841e-07, 0.766044, -0.642788, 0, 19.696, -5 )
 current = true
 
-[node name="CrateSpawningZone" parent="." instance=ExtResource( 3 )]
+[node name="Crates" type="Spatial" parent="."]
+
+[node name="CrateSpawningZone" parent="Crates" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.09511, 5.50002, 8.50715 )
 
-[node name="CrateSpawningZone2" parent="." instance=ExtResource( 3 )]
+[node name="CrateSpawningZone2" parent="Crates" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.20926, 5.44651, 2.75103 )
 
-[node name="CrateSpawningZone3" parent="." instance=ExtResource( 3 )]
+[node name="CrateSpawningZone3" parent="Crates" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.48779, 5.44651, 2.75103 )
 
-[node name="CrateSpawningZone4" parent="." instance=ExtResource( 3 )]
+[node name="CrateSpawningZone4" parent="Crates" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.48779, 5.44651, 8.49869 )
 
 [node name="Ocean" type="MeshInstance" parent="."]
