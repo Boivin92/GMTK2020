@@ -25,7 +25,9 @@ script = ExtResource( 9 )
 script = ExtResource( 5 )
 
 [node name="Grue" parent="boat2" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0240302, 6.0001, 5.10777 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0240302, 6.0001, 11.1653 )
+control_type = 1
+camera = NodePath("../../Camera")
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( -1, -2.49609e-07, 2.09447e-07, 0, 0.642788, 0.766044, -3.25841e-07, 0.766044, -0.642788, 0, 19.696, -5 )

@@ -75,7 +75,7 @@ func process_point_click() -> Vector3:
 	return Vector3.ZERO
 
 func mouse_world_position() -> Vector3:
-	var pont = Plane(Vector3(0, 1, 0), 2)
+	var pont = Plane(Vector3(0, 1, 0), translation.y)
 	var p2d = get_viewport().get_mouse_position()
 	var p3d = pont.intersects_ray(camera.project_ray_origin(p2d), camera.project_ray_normal(p2d))
 	return p3d - translation if p3d else Vector3.ZERO
