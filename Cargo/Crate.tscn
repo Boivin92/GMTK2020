@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Cargo/Crate.gd" type="Script" id=1]
+[ext_resource path="res://Cargo/largeCrateMesh.tres" type="CubeMesh" id=2]
+[ext_resource path="res://Cargo/largeBoxShape.tres" type="Shape" id=3]
+[ext_resource path="res://Cargo/metal.tres" type="Material" id=4]
+
+[node name="Crate" type="RigidBody"]
+collision_layer = 2
+script = ExtResource( 1 )
+material_type = "metal"
+size = "large"
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+material_override = ExtResource( 4 )
+mesh = ExtResource( 2 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = ExtResource( 3 )
