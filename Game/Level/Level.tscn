@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Grue/Grue.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Boat/boat2.tscn" type="PackedScene" id=2]
@@ -49,6 +49,24 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector3( 0, 0, 0 ), Vector3( 0, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "Wave events"
+length = 90.0
+tracks/0/type = "method"
+tracks/0/path = NodePath("boat")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 2.0, 4.0, 0.0 ],
+"method": "add_wave_event"
+} ]
 }
 
 [node name="Level" type="Spatial"]
@@ -159,5 +177,9 @@ light_energy = 3.75
 wait_time = 120.0
 one_shot = true
 autostart = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Wave events"
+"anims/Wave events" = SubResource( 5 )
 [connection signal="body_entered" from="Ocean/Area" to="Ocean" method="_on_Area_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
