@@ -1,4 +1,4 @@
-extends StaticBody
+extends KinematicBody
 
 export (float, 0, 20, 0.1) var roll_period = 1.0
 export (float, 0, 1, 0.05) var roll_amplitude = 1.0
