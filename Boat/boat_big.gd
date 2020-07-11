@@ -7,6 +7,9 @@ export (float, 0, 1, 0.05) var pitch_amplitude = 1.0
 
 var time_itself = 0
 
+func _ready():
+	set_physics_process(false)
+
 func _physics_process(delta):
 	time_itself += delta
 	rotation.z = get_pitch()
@@ -19,3 +22,9 @@ func get_roll() -> float:
 func get_pitch() -> float:
 	var base = sin( time_itself * PI / pitch_period ) * pitch_amplitude / 10
 	return base
+
+func start_navigation():
+	set_physics_process(true)
+
+func stop_navigation():
+	set_physics_process(false)
