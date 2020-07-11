@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Grue/Grue.gd" type="Script" id=1]
 [ext_resource path="res://Grue/model/Claw.fbx" type="PackedScene" id=2]
+[ext_resource path="res://Grue/Zone.png" type="Texture" id=3]
 
 [sub_resource type="SphereShape" id=1]
 radius = 2.0
@@ -125,3 +126,8 @@ material/0 = null
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Activate = SubResource( 2 )
 anims/Deactivate = SubResource( 3 )
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform( 0.5, 0, 0, 0, -8.14603e-08, -0.5, 0, 0.5, -8.14603e-08, 0, 0, 0 )
+modulate = Color( 1, 1, 1, 0.364706 )
+texture = ExtResource( 3 )
