@@ -1,0 +1,20 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Grue/model/ClawTextureMap.png" type="Texture" id=1]
+[ext_resource path="res://Grue/model/Claw.fbx" type="PackedScene" id=2]
+[ext_resource path="res://Grue/model/ClawMetalMap.png" type="Texture" id=3]
+[ext_resource path="res://Grue/model/ClawNormalMap.png" type="Texture" id=4]
+[ext_resource path="res://Grue/model/ClawRoughnessMap.png" type="Texture" id=5]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_texture = ExtResource( 1 )
+metallic_texture = ExtResource( 3 )
+roughness_texture = ExtResource( 5 )
+normal_enabled = true
+normal_scale = 1.0
+normal_texture = ExtResource( 4 )
+
+[node name="Claw" instance=ExtResource( 2 )]
+
+[node name="Claw2" parent="." index="0"]
+material/0 = SubResource( 1 )

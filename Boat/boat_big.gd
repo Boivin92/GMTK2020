@@ -54,3 +54,7 @@ func start_navigation():
 
 func stop_navigation():
 	set_physics_process(false)
+	time_itself = 0
+	$Tween.remove_all()
+	$Tween.interpolate_property(self, "rotation", self.rotation, Vector3(0,0,0), 2, Tween.TRANS_EXPO, Tween.EASE_IN_OUT)
+	$Tween.start()

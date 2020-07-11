@@ -40,9 +40,13 @@ func game_over():
 
 func start_navigation():
 	$Timer.start()
+	$AnimationPlayer.play("Wave events")
+	navigating = true
 	
 func stop_navigation():
 	number_of_spawn_crates += 1
 	if number_of_spawn_crates == 6:
 		get_tree().change_scene("res://Game/Menu/GameOver.tscn")
 	create_spawns(number_of_spawn_crates)
+	$AnimationPlayer.stop()
+	navigating = false
