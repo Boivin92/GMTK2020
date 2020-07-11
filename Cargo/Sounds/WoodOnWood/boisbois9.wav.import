@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/boisbois9.wav-0ccc1c8141f3013fd0b3731132dd05aa.sample"
+
+[deps]
+
+source_file="res://Cargo/Sounds/WoodOnWood/boisbois9.wav"
+dest_files=[ "res://.import/boisbois9.wav-0ccc1c8141f3013fd0b3731132dd05aa.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -92,6 +92,9 @@ script = ExtResource( 10 )
 
 [node name="Wave" parent="Ocean" instance=ExtResource( 7 )]
 
+[node name="Wave2" parent="Ocean" instance=ExtResource( 7 )]
+transform = Transform( -3.37766e-07, -1, 0, 1, -3.37766e-07, 0, 0, 0, 1, -26.2564, -2.70164, 193.869 )
+
 [node name="Area" type="Area" parent="Ocean"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Ocean/Area"]

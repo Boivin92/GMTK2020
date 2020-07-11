@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/metalbois4.wav-3b8746850cd06d1687c595aef7d9c795.sample"
+
+[deps]
+
+source_file="res://Cargo/Sounds/MetalOnWood/metalbois4.wav"
+dest_files=[ "res://.import/metalbois4.wav-3b8746850cd06d1687c595aef7d9c795.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

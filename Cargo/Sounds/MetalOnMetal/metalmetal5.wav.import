@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/metalmetal5.wav-4e1a8263625a3236dd70d9b33f3c21f6.sample"
+
+[deps]
+
+source_file="res://Cargo/Sounds/MetalOnMetal/metalmetal5.wav"
+dest_files=[ "res://.import/metalmetal5.wav-4e1a8263625a3236dd70d9b33f3c21f6.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

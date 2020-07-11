@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/splouche5.wav-5077815a730c2fbd78cc541f29393372.sample"
+
+[deps]
+
+source_file="res://Cargo/Sounds/Splouch/splouche5.wav"
+dest_files=[ "res://.import/splouche5.wav-5077815a730c2fbd78cc541f29393372.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
