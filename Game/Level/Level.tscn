@@ -1,0 +1,58 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Boat/Boat.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Cargo/SpawningZones/CrateSpawningZone.tscn" type="PackedScene" id=3]
+
+[sub_resource type="Animation" id=1]
+resource_name = "craddle"
+length = 10.0
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:rotation_degrees:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, -5.297, -0.25, 0, 0.25, 0, -3.57083, -0.25, 0, 0.25, 0, 6.88444, -0.25, 0, 0.25, 0, 7.19789, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 2, 4, 6, 8, 10 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:rotation_degrees:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, -2.815e-08, -0.25, 0, 0.25, 0, -1.82918, -0.25, 0, 0.25, 0, -1.24004, -0.25, 0, 0.25, 0, 1.49784, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 2, 4, 6, 8, 10 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath(".:rotation_degrees:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, -10.384, -0.25, 0, 0.25, 0, 19.283, -0.25, 0, 0.25, 0, 12.7892, -0.25, 0, 0.25, 0, 1.81888, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 2, 4, 6, 8, 10 )
+}
+
+[node name="Level" type="Spatial"]
+
+[node name="boat" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="boat"]
+autoplay = "craddle"
+anims/craddle = SubResource( 1 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.896262, 0.443525, 0, -0.443525, 0.896262, 0, 8.01034, 15.3021 )
+current = true
+
+[node name="CrateSpawningZone" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.159279, 2.77337, 8.50715 )
+
+[node name="CrateSpawningZone2" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.159279, 2.77337, 2.75103 )

@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Cargo/Crate.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Cargo/SpawningZones/Base_CSZ.tscn" type="PackedScene" id=2]
+
+[node name="CSZ_2" type="Spatial"]
+
+[node name="Crate" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.542999, 0 )
+
+[node name="Crate2" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.58273, 0 )
+
+[node name="Crate3" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.08344, 0.542999, 0 )
+
+[node name="Crate4" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.542999, 1.08397 )
+
+[node name="Crate5" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.08115, 0.542999, 0 )
+
+[node name="Crate6" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.07885, 0.542999, 1.08106 )
+
+[node name="Crate7" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.578334, 1.62536, 1.06682 )
+
+[node name="Crate8" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.542999, -1.07506 )
+
+[node name="Crate9" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.10472, 0.542999, -1.07953 )
+
+[node name="Base_CSZ" parent="." instance=ExtResource( 2 )]
