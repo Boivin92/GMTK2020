@@ -13,7 +13,8 @@ func is_lost():
 		$SplouchePlayer.play_random()
 
 func _on_SplouchePlayer_finished():
-	queue_free()
+	if $FloatTimer.is_stopped():
+		$FloatTimer.start()
 
 
 func _on_Box_body_entered(body):
@@ -26,3 +27,13 @@ func _on_Box_body_entered(body):
 			else:
 				$CollisionPlayer.play_random([self,body], "MetalOnWood")
 	pass # Replace with function body.
+
+
+func _on_FloatTimer_timeout():
+	collision_mask = 0
+	collision_layer = 0
+	$FallTimer.start()
+
+
+func _on_FallTimer_timeout():
+	queue_free()

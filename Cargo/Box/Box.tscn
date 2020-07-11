@@ -42,5 +42,13 @@ material/0 = null
 [node name="SplouchePlayer" parent="." instance=ExtResource( 3 )]
 
 [node name="CollisionPlayer" parent="." instance=ExtResource( 4 )]
+
+[node name="FloatTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="FallTimer" type="Timer" parent="."]
 [connection signal="body_entered" from="." to="." method="_on_Box_body_entered"]
 [connection signal="finished" from="SplouchePlayer" to="." method="_on_SplouchePlayer_finished"]
+[connection signal="timeout" from="FloatTimer" to="." method="_on_FloatTimer_timeout"]
+[connection signal="timeout" from="FallTimer" to="." method="_on_FallTimer_timeout"]
