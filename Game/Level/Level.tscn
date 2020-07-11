@@ -25,9 +25,19 @@ script = ExtResource( 9 )
 script = ExtResource( 5 )
 
 [node name="Grue" parent="boat2" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0240302, 6.0001, 11.1653 )
-control_type = 1
-camera = NodePath("../../Camera")
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0240302, 6.0001, 5.10777 )
+
+[node name="SpotLight" type="SpotLight" parent="boat2"]
+transform = Transform( -0.979445, 0.108115, -0.170289, -4.68576e-08, 0.844225, 0.535989, 0.201711, 0.524972, -0.826872, 3.17265, 9.84154, -2.08678 )
+light_energy = 3.0
+spot_range = 13.3769
+spot_angle = 63.6524
+
+[node name="SpotLight2" type="SpotLight" parent="boat2"]
+transform = Transform( -0.979445, -0.108115, 0.170289, 0, 0.844225, 0.535989, -0.20171, 0.524972, -0.826872, -2.82905, 9.84154, -2.08678 )
+light_energy = 3.0
+spot_range = 13.3769
+spot_angle = 67.7892
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( -1, -2.49609e-07, 2.09447e-07, 0, 0.642788, 0.766044, -3.25841e-07, 0.766044, -0.642788, 0, 19.696, -5 )
@@ -64,6 +74,7 @@ environment = ExtResource( 8 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -51.3517, 74.2112, -106.257 )
+visible = false
 light_color = Color( 1, 0.854902, 0.415686, 1 )
 light_energy = 3.75
 
