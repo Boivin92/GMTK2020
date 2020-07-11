@@ -12,7 +12,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.611674, 0 )
 
 [node name="LargeMetalCrate" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.611674, 1.09538 )
-collision_mask = 3
 
 [node name="MetalCrate" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.611674, -1.08102 )
