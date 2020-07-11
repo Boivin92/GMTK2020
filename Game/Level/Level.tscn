@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
+[ext_resource path="res://Grue/Grue.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Boat/Boat.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Cargo/SpawningZones/CrateSpawningZone.tscn" type="PackedScene" id=3]
 
@@ -41,14 +42,16 @@ tracks/2/keys = {
 [node name="Level" type="Spatial"]
 
 [node name="boat" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="boat"]
 autoplay = "craddle"
 anims/craddle = SubResource( 1 )
 
+[node name="Grue" parent="boat" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0240302, 3.73421, 5.82149 )
+
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.896262, 0.443525, 0, -0.443525, 0.896262, 0, 8.01034, 15.3021 )
+transform = Transform( -1, 2.09447e-07, -2.49609e-07, 0, 0.766044, 0.642788, 3.25841e-07, 0.642788, -0.766044, 0, 10, -5 )
 current = true
 
 [node name="CrateSpawningZone" parent="." instance=ExtResource( 3 )]
