@@ -8,15 +8,24 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "RigidBody",
+"class": "Crate",
+"language": "GDScript",
+"path": "res://Cargo/Crate.gd"
+} ]
 _global_script_class_icons={
-
+"Crate": ""
 }
 
 [application]
 
 config/name="GMTK2020"
 config/icon="res://icon.png"
+
+[autoload]
+
+Score="*res://Game/Score.tscn"
 
 [input]
 
