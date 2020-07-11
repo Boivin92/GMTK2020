@@ -23,7 +23,8 @@ var state = State.Raised
 
 func _ready() -> void:
 	$Effet.gravity = puissance
-	camera = get_node(camera)
+	if control_type != ControlType.Keyboard:
+		camera = get_node(camera)
 
 func _process(delta: float) -> void:
 	var move = Vector3.ZERO
