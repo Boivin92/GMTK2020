@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Game/Level/LevelEnvironment.tres" type="Environment" id=1]
-[ext_resource path="res://Boat/boat_big.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Boat/boat2.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Game/Menu/Menu.tscn" type="PackedScene" id=3]
 
 [sub_resource type="Animation" id=1]
@@ -54,6 +54,6 @@ anims/passive = SubResource( 1 )
 transform = Transform( 1, 0, 0, 0, 0.847242, 0.531206, 0, -0.531206, 0.847242, 0, 19.7132, 44.5064 )
 current = true
 
-[node name="boat_big" parent="." instance=ExtResource( 2 )]
+[node name="boat2" parent="." instance=ExtResource( 2 )]
 
 [node name="Menu" parent="." instance=ExtResource( 3 )]
