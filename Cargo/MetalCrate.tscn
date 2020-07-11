@@ -5,6 +5,7 @@
 
 [node name="MetalCrate" instance=ExtResource( 1 )]
 collision_layer = 2
+cargo_value = 60
 
 [node name="MeshInstance" parent="." index="0"]
 material/0 = ExtResource( 2 )

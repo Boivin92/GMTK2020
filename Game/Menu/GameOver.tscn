@@ -1,0 +1,68 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Game/Menu/ui_theme.tres" type="Theme" id=1]
+[ext_resource path="res://Game/Menu/GameOver.gd" type="Script" id=2]
+
+[node name="GameOver" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -190.5
+margin_top = -21.0
+margin_right = 190.5
+margin_bottom = 21.0
+custom_constants/separation = 30
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outcome" type="Label" parent="VBoxContainer"]
+margin_right = 381.0
+margin_bottom = 19.0
+text = "You made it to port!"
+align = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 49.0
+margin_right = 381.0
+margin_bottom = 68.0
+alignment = 1
+
+[node name="Remaining" type="Label" parent="VBoxContainer/HBoxContainer"]
+margin_right = 280.0
+margin_bottom = 19.0
+text = "Your remaining cargo value is:  "
+align = 2
+
+[node name="Value" type="Label" parent="VBoxContainer/HBoxContainer"]
+margin_left = 284.0
+margin_right = 381.0
+margin_bottom = 19.0
+text = "over 9000!"
+
+[node name="BetterLuck" type="Label" parent="VBoxContainer"]
+visible = false
+margin_top = 98.0
+margin_right = 381.0
+margin_bottom = 117.0
+text = "Better luck next time!"
+align = 1
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+margin_left = 149.0
+margin_top = 98.0
+margin_right = 232.0
+margin_bottom = 121.0
+size_flags_horizontal = 4
+text = "It's over!"
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_Button_pressed"]

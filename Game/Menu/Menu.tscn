@@ -1,10 +1,12 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Game/Menu/Menu.gd" type="Script" id=1]
+[ext_resource path="res://Game/Menu/ui_theme.tres" type="Theme" id=2]
 
 [node name="Menu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+theme = ExtResource( 2 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -23,7 +25,7 @@ __meta__ = {
 }
 
 [node name="StartGame" type="Button" parent="VBoxContainer"]
-margin_top = 259.0
+margin_top = 256.0
 margin_right = 128.0
 margin_bottom = 279.0
 text = "Start Game"
@@ -31,7 +33,7 @@ text = "Start Game"
 [node name="Quit" type="Button" parent="VBoxContainer"]
 margin_top = 320.0
 margin_right = 128.0
-margin_bottom = 340.0
+margin_bottom = 343.0
 text = "Quit"
 [connection signal="pressed" from="VBoxContainer/StartGame" to="." method="_on_StartGame_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_Quit_pressed"]

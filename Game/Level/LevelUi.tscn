@@ -1,10 +1,16 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://LevelUi.gd" type="Script" id=1]
+[ext_resource path="res://Game/Menu/ui_theme.tres" type="Theme" id=2]
 
 [node name="LevelUi" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = -10.0
+theme = ExtResource( 2 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -18,12 +24,34 @@ __meta__ = {
 }
 
 [node name="Total" type="Label" parent="VBoxContainer"]
-margin_right = 78.0
-margin_bottom = 14.0
+margin_right = 121.0
+margin_bottom = 19.0
 text = "Total Cargo: "
 
 [node name="Remaining" type="Label" parent="VBoxContainer"]
-margin_top = 18.0
-margin_right = 78.0
-margin_bottom = 32.0
+margin_top = 23.0
+margin_right = 121.0
+margin_bottom = 42.0
 text = "Remaining: "
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -176.0
+margin_right = -3.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ArrivalAt" type="Label" parent="VBoxContainer2"]
+margin_right = 173.0
+margin_bottom = 19.0
+text = "Arrival at port in:"
+
+[node name="TimeRemaining" type="Label" parent="VBoxContainer2"]
+margin_top = 23.0
+margin_right = 173.0
+margin_bottom = 42.0
+text = "00:00"
+align = 1
