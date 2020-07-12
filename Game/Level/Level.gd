@@ -4,6 +4,7 @@ var spawn_zone = preload("res://Cargo/SpawningZones/CrateSpawningZone.tscn")
 
 var navigating = false
 var number_of_spawn_crates = 3
+var current_event := 1
 
 func _ready():
 	randomize()
@@ -40,7 +41,7 @@ func game_over():
 
 func start_navigation():
 	$Timer.start()
-	$AnimationPlayer.play("Wave events 3")
+	$AnimationPlayer.play("Wave events %d" % current_event)
 	navigating = true
 	
 func stop_navigation():
@@ -49,4 +50,5 @@ func stop_navigation():
 		get_tree().change_scene("res://Game/Menu/GameOver.tscn")
 	create_spawns(number_of_spawn_crates)
 	$AnimationPlayer.stop()
+	current_event += 1
 	navigating = false
