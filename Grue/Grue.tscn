@@ -162,7 +162,6 @@ tracks/1/keys = {
 script = ExtResource( 1 )
 
 [node name="Effet" type="Area" parent="."]
-space_override = 1
 gravity_point = true
 gravity_vec = Vector3( 0, 0, 0 )
 

@@ -87,13 +87,13 @@ tracks/5/keys = {
 "times": PoolRealArray( 0, 3, 6, 9, 12 )
 }
 
-[sub_resource type="Curve" id=4]
+[sub_resource type="Curve" id=3]
 _data = [ Vector2( 0, 0.684091 ), 0.0, 0.0, 0, 0, Vector2( 0.392405, 0.856818 ), 0.0, 0.0, 0, 0, Vector2( 0.753165, 0.665909 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.784091 ), 0.0, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=5]
-curve = SubResource( 4 )
+[sub_resource type="CurveTexture" id=4]
+curve = SubResource( 3 )
 
-[sub_resource type="ParticlesMaterial" id=3]
+[sub_resource type="ParticlesMaterial" id=5]
 direction = Vector3( 0, 0, 1 )
 spread = 0.0
 gravity = Vector3( 0, 0, 0 )
@@ -101,7 +101,7 @@ initial_velocity = 1.0
 initial_velocity_random = 0.2
 tangential_accel = 1.0
 scale_random = 0.32
-scale_curve = SubResource( 5 )
+scale_curve = SubResource( 4 )
 color = Color( 0.290196, 0.290196, 0.290196, 1 )
 
 [node name="MainMenu" type="Spatial"]
@@ -117,7 +117,7 @@ current = true
 far = 150.0
 
 [node name="boat2" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.999428, -0.0338141, 0, 0.0338134, 0.999407, 0.00646508, -0.000218611, -0.00646138, 0.999979, 0, 0, 0 )
+transform = Transform( 0.997909, 0.0646368, 4.22355e-12, -0.0646172, 0.997606, -0.0246067, -0.0015905, 0.0245552, 0.999697, 0, 0, 0 )
 
 [node name="Menu" parent="." instance=ExtResource( 3 )]
 
@@ -218,5 +218,5 @@ transform = Transform( -8.90229, 0, 4.55514, 0, 10, 0, -4.55514, 0, -8.90229, 44
 amount = 25
 lifetime = 25.0
 preprocess = 25.0
-process_material = SubResource( 3 )
+process_material = SubResource( 5 )
 draw_pass_1 = ExtResource( 17 )
