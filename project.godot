@@ -28,6 +28,7 @@ config/icon="res://sinking-ship.png"
 
 Score="*res://Game/Score.tscn"
 CollisionSoundServer="*res://Audio/CollisionSoundServer.tscn"
+PlayerInfos="*res://Game/PlayerInfos.tscn"
 
 [input]
 

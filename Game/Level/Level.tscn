@@ -1,7 +1,8 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Grue/Grue.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Boat/boat2.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Cargo/Box/Box.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Boat/Fences/Fence.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Boat/boat_big.gd" type="Script" id=5]
 [ext_resource path="res://Game/Level/water.tres" type="Material" id=6]
@@ -134,6 +135,10 @@ transform = Transform( -1, -2.49609e-07, 2.09447e-07, 0, 0.642788, 0.766044, -3.
 current = true
 
 [node name="SpawnContainer" type="Spatial" parent="."]
+
+[node name="TutorialBox" parent="SpawnContainer" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.6598, 8.9147 )
+cargo_value = 0
 
 [node name="Crates" type="Spatial" parent="."]
 
