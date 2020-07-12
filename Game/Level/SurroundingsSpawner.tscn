@@ -1,0 +1,21 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Game/Level/SurroundingsSpawner.gd" type="Script" id=1]
+[ext_resource path="res://Surroundings/rocks/02/rock_3.fbx" type="PackedScene" id=2]
+[ext_resource path="res://Tools/MovementAnimation.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Surroundings/rocks/03/rock_04.fbx" type="PackedScene" id=4]
+[ext_resource path="res://Surroundings/rocks/01/rock_2.fbx" type="PackedScene" id=5]
+[ext_resource path="res://Surroundings/buoy/buoy.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Game/Level/WaveFlip.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Game/Level/Wave.tscn" type="PackedScene" id=8]
+
+[node name="SurroundingsSpawner" type="Spatial" groups=[
+"game",
+]]
+script = ExtResource( 1 )
+spawnableObjects = [ ExtResource( 5 ), ExtResource( 2 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 6 ) ]
+movement_animator = ExtResource( 3 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

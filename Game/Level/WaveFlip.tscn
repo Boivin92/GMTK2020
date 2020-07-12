@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Game/Level/Wave.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Game/Level/WATER.png" type="Texture" id=2]
+
+[sub_resource type="SpatialMaterial" id=1]
+params_cull_mode = 1
+params_grow = true
+params_grow_amount = 0.2
+
+[sub_resource type="SpatialMaterial" id=2]
+next_pass = SubResource( 1 )
+albedo_color = Color( 0, 0.376471, 0.576471, 1 )
+albedo_texture = ExtResource( 2 )
+uv1_scale = Vector3( 10, 15, 1 )
+
+[sub_resource type="CylinderMesh" id=3]
+material = SubResource( 2 )
+bottom_radius = 6.0
+height = 180.0
+
+[node name="WaveFlip" instance=ExtResource( 1 )]
+mesh = SubResource( 3 )

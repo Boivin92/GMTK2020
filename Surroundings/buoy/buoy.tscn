@@ -44,11 +44,13 @@ tracks/1/keys = {
 }
 
 [node name="bouer_2" instance=ExtResource( 5 )]
-transform = Transform( 0.988905, 0.0669816, -0.132589, -0.0846565, 0.98756, -0.132506, 0.122064, 0.142261, 0.982274, 0, 0.136925, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.24244, 0 )
 
 [node name="bouer2" parent="." index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.24244, 0 )
 material/0 = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]
+root_node = NodePath("../bouer2")
 autoplay = "wobble"
 anims/wobble = SubResource( 2 )
