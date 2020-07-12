@@ -40,7 +40,7 @@ func game_over():
 
 func start_navigation():
 	$Timer.start()
-	$AnimationPlayer.play("Wave events 2")
+	$AnimationPlayer.play("Wave events 3")
 	navigating = true
 	
 func stop_navigation():
