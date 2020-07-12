@@ -2,27 +2,18 @@
 
 [ext_resource path="res://Cargo/Box/Box.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Cargo/SpawningZones/Base_CSZ.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Cargo/Crate.gd" type="Script" id=3]
+[ext_resource path="res://Cargo/Box/BoxLight.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Cargo/OilBarrel/OilBarrelGris.tscn" type="PackedScene" id=4]
 
 [node name="CSZ_2" type="Spatial"]
 
 [node name="Base_CSZ" parent="." instance=ExtResource( 2 )]
 
-[node name="Box" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.17395, 0, 1.0479 )
-
 [node name="Box2" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.17395, 0, -0.0967309 )
 
 [node name="Box3" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.17395, 0, -1.29771 )
-
-[node name="Box4" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.111077, 0, 1.0479 )
-
-[node name="Box5" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.29976, 0, 1.0479 )
 
 [node name="Box6" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.198056, 0, -0.0866762 )
@@ -38,5 +29,12 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.15046, 1.14511, 0.478348 )
 
 [node name="OilBarrelGris" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0612679, -1.25069 )
-script = ExtResource( 3 )
-cargo_value = 75
+
+[node name="BoxLight" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.991633, 0, 0.12909, 0, 1, 0, -0.12909, 0, 0.991633, 1.1968, 0, 1.22385 )
+
+[node name="BoxLight2" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.99894, 0, -0.0460255, 0, 1, 0, 0.0460255, 0, 0.99894, 0.0571479, 0, 1.22385 )
+
+[node name="BoxLight3" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.995771, 0, 0.0918666, 0, 1, 0, -0.0918666, 0, 0.995771, -1.10512, 0, 1.22385 )

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Cargo/Container/Container.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Cargo/Box/Box.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Cargo/Box/BoxDark.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Cargo/SpawningZones/Base_CSZ.tscn" type="PackedScene" id=3]
 
 [node name="Spatial" type="Spatial"]
@@ -17,5 +17,5 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.130789, 1.1267 )
 [node name="Container3" parent="." instance=ExtResource( 1 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 1.31274, 0.545059 )
 
-[node name="Box" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.06549, 0, -1.3369 )
+[node name="BoxDark" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.476161, 0, -1.37983 )

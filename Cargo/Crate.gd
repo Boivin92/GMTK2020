@@ -22,7 +22,7 @@ func _on_SplouchePlayer_finished():
 
 func _on_Box_body_entered(body):
 	if body.is_in_group("crate") && not lost:
-		if self.linear_velocity.length() > 0.5:
+		if self.linear_velocity.length() > 1:
 			if body.is_in_group("wood") && self.is_in_group("wood"):
 				$CollisionPlayer.play_random([self,body], "WoodOnWood")
 			elif body.is_in_group("metal") && self.is_in_group("metal"):
