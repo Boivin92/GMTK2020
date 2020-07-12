@@ -149,7 +149,7 @@ margin_left = -253.5
 margin_top = -9.5
 margin_right = 253.5
 margin_bottom = 9.5
-text = "Move your magnetic claw around by using the WASD keys."
+text = "Move your magnetic claw around by using the arrow keys."
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
