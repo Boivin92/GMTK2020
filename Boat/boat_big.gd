@@ -14,9 +14,11 @@ func _ready():
 func _physics_process(delta):
 	time_itself += delta
 	# z is our forward/roll axis
-	rotation.z = get_roll()
+	var delta_rz = get_roll() - rotation.z
+	rotate_z(clamp(delta_rz, -0.004, 0.004))
 	# x is our sideways/pitch axis
-	rotation.x = get_pitch()
+	var delta_rx = get_pitch() - rotation.x
+	rotate_x(clamp(delta_rx, -0.004, 0.004))
 
 func get_pitch() -> float:
 	var base = get_wave_part(time_itself, roll_period, roll_amplitude)
