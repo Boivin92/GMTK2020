@@ -187,7 +187,7 @@ mesh = SubResource( 5 )
 material/0 = null
 
 [node name="Sprite3D2" type="Sprite3D" parent="."]
-transform = Transform( 0.183736, 0.465683, 0, -0.470018, 0.182042, 0, 0, 0, 0.5, 0, 0, 0 )
+transform = Transform( 0.458753, 0.279066, 0, -0.308579, 0.414876, 0, 0, 0, 0.5, 0, 0, 0 )
 visible = false
 modulate = Color( 0.247059, 0.87451, 0.956863, 1 )
 texture = ExtResource( 3 )

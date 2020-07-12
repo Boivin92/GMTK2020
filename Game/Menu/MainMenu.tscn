@@ -1,48 +1,90 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Game/Level/LevelEnvironment.tres" type="Environment" id=1]
 [ext_resource path="res://Boat/boat2.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Game/Menu/Menu.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Game/Level/water.tres" type="Material" id=4]
+[ext_resource path="res://Surroundings/rocks/02/rock_3.fbx" type="PackedScene" id=5]
+[ext_resource path="res://Surroundings/rocks/01/rock_2.fbx" type="PackedScene" id=6]
+[ext_resource path="res://Surroundings/buoy/buoy.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Surroundings/rocks/03/rock_04.fbx" type="PackedScene" id=8]
+[ext_resource path="res://Cargo/Container/ContainerJaune.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Game/Menu/Main/house.fbx" type="PackedScene" id=10]
+[ext_resource path="res://Game/Menu/Main/bridge.fbx" type="PackedScene" id=11]
+[ext_resource path="res://Game/Menu/Main/plateforme.fbx" type="PackedScene" id=12]
+[ext_resource path="res://Game/Menu/Main/tree.fbx" type="PackedScene" id=13]
+[ext_resource path="res://Cargo/OilBarrel/OilBarrelGris.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Cargo/Box/Box.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Cargo/Container/Container.tscn" type="PackedScene" id=16]
 
-[sub_resource type="Animation" id=1]
-resource_name = "passive"
-length = 40.0
+[sub_resource type="PlaneMesh" id=2]
+material = ExtResource( 4 )
+size = Vector2( 200, 200 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "flishfloush"
+length = 12.0
 loop = true
 tracks/0/type = "bezier"
-tracks/0/path = NodePath(".:rotation_degrees:x")
+tracks/0/path = NodePath(".:mesh:material:uv1_offset:x")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 40 )
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 12 )
 }
 tracks/1/type = "bezier"
-tracks/1/path = NodePath(".:rotation_degrees:y")
+tracks/1/path = NodePath(".:mesh:material:uv1_offset:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 360, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 40 )
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 12 )
 }
 tracks/2/type = "bezier"
-tracks/2/path = NodePath(".:rotation_degrees:z")
+tracks/2/path = NodePath(".:mesh:material:uv1_offset:z")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 40 )
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 12 )
 }
-
-[sub_resource type="PlaneMesh" id=2]
-material = ExtResource( 4 )
-size = Vector2( 200, 200 )
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("../boat2:rotation_degrees:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 1.41, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, -0.986, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 1.41, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 3, 6, 9, 12 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("../boat2:rotation_degrees:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 2.42065e-10, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 2.42065e-10, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 3, 6, 9, 12 )
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("../boat2:rotation_degrees:z")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( -3.706, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 5.158, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, -3.706, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 3, 6, 9, 12 )
+}
 
 [node name="MainMenu" type="Spatial"]
 
@@ -51,18 +93,103 @@ environment = ExtResource( 1 )
 
 [node name="Spatial" type="Spatial" parent="."]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Spatial"]
-autoplay = "passive"
-anims/passive = SubResource( 1 )
-
 [node name="Camera" type="Camera" parent="Spatial"]
-transform = Transform( 1, 0, 0, 0, 0.847242, 0.531206, 0, -0.531206, 0.847242, 0, 19.7132, 44.5064 )
+transform = Transform( 0.5, -0.254459, 0.827799, 1.13133e-08, 0.95586, 0.293823, -0.866025, -0.146912, 0.47793, 31.751, 14.5577, 31.3991 )
 current = true
 
 [node name="boat2" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.999697, 0.0246225, 1.60836e-12, -0.0246214, 0.999653, -0.00936877, -0.000230682, 0.00936593, 0.999956, 0, 0, 0 )
 
 [node name="Menu" parent="." instance=ExtResource( 3 )]
 
-[node name="MeshInstance" type="MeshInstance" parent="."]
+[node name="Ocean" type="MeshInstance" parent="."]
 mesh = SubResource( 2 )
 material/0 = null
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Ocean"]
+autoplay = "flishfloush"
+anims/flishfloush = SubResource( 3 )
+
+[node name="Spatial2" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5168, -0.200859, 0 )
+
+[node name="bouer_2" parent="Spatial2" instance=ExtResource( 7 )]
+transform = Transform( 0.977831, -0.0621451, -0.199959, 0.0453737, 0.99514, -0.0873938, 0.204418, 0.0763835, 0.975899, 0, 0, 0 )
+
+[node name="rock_2" parent="." instance=ExtResource( 6 )]
+transform = Transform( 0.831411, 0, 0.555657, 0, 1, 0, -0.555657, 0, 0.831411, 22.1726, -0.442724, 16.2175 )
+
+[node name="rock_3" parent="." instance=ExtResource( 6 )]
+transform = Transform( -0.880932, 0, -0.473242, 0, 1, 0, 0.473242, 0, -0.880932, 23.7472, -0.442724, 16.2175 )
+
+[node name="rock_4" parent="." instance=ExtResource( 5 )]
+transform = Transform( 0.965957, 0, 0.258701, 0, 1, 0, -0.258701, 0, 0.965957, 25.2507, -0.571689, 18.6851 )
+
+[node name="rock_04" parent="." instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24.7738, -0.155919, 11.3309 )
+
+[node name="Island" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -37.9715, 0, 0 )
+
+[node name="house" parent="Island" instance=ExtResource( 10 )]
+transform = Transform( 3.54625, 0, 3.52478, 0, 5, 0, -3.52478, 0, 3.54625, -3.69359, 3.65863, -6.2758 )
+
+[node name="plateforme" parent="Island" instance=ExtResource( 12 )]
+transform = Transform( 4.84257, 0.30136, 1.20775, -0.310556, 4.99035, 0, -1.20541, -0.0750146, 4.85194, 7.60012, 4.28482, 37.952 )
+
+[node name="ContainerJaune" parent="Island/plateforme" instance=ExtResource( 9 )]
+transform = Transform( 0.000386958, -0.06211, 0.99807, -0.00621876, 0.998051, 0.0621112, -0.999982, -0.00623079, -4.29768e-08, -0.889808, 0.0930339, -0.0635655 )
+mode = 1
+
+[node name="Box" parent="Island/plateforme" instance=ExtResource( 15 )]
+transform = Transform( 0.244003, -0.000373176, 0.0544263, -0.000373179, 0.249977, 0.00338702, -0.0544263, -0.00338702, 0.24398, -0.104995, 0.07999, -0.976698 )
+mode = 1
+
+[node name="Box2" parent="Island/plateforme" instance=ExtResource( 15 )]
+transform = Transform( 0.243553, -0.000267504, 0.0564088, 0.00686633, 0.248279, -0.028469, -0.05599, 0.0292841, 0.241884, 0.555582, -0.103773, -1.9603 )
+mode = 1
+
+[node name="Box3" parent="Island/plateforme" instance=ExtResource( 15 )]
+transform = Transform( 0.247665, -0.000145329, 0.0340921, -0.000145341, 0.249991, 0.0021216, -0.0340921, -0.0021216, 0.247656, 0.125222, 0.366627, -1.00929 )
+mode = 1
+
+[node name="Box4" parent="Island/plateforme" instance=ExtResource( 15 )]
+transform = Transform( 0.249924, -4.72646e-06, -0.00616591, -4.73298e-06, 0.25, -0.000383713, 0.00616589, 0.000383712, 0.249924, 0.27534, 0.103659, -1.06873 )
+mode = 1
+
+[node name="Box5" parent="Island/plateforme" instance=ExtResource( 15 )]
+transform = Transform( 0.249944, -3.45614e-06, -0.00527339, -3.46359e-06, 0.25, -0.00032817, 0.00527337, 0.00032817, 0.249944, -0.104995, 0.07999, -0.67052 )
+mode = 1
+
+[node name="OilBarrelGris" parent="Island/plateforme" instance=ExtResource( 14 )]
+transform = Transform( 0.29956, -0.0162498, 0, 0.0162498, 0.29956, 0, 0, 0, 0.3, -0.0792065, 0.0832196, 0.774618 )
+mode = 1
+
+[node name="OilBarrelGris2" parent="Island/plateforme" instance=ExtResource( 14 )]
+transform = Transform( 0.29956, -0.0162498, 0, 0.0162498, 0.29956, 0, 0, 0, 0.3, 0.166962, 0.098539, 0.544396 )
+mode = 1
+
+[node name="Container" parent="Island/plateforme" instance=ExtResource( 16 )]
+transform = Transform( 0.98694, -0.0391982, -0.15625, 0.0229779, 0.994282, -0.104296, 0.159444, 0.0993438, 0.982197, -0.64368, -0.20524, 2.6321 )
+mode = 1
+
+[node name="rock_5" parent="Island" instance=ExtResource( 5 )]
+transform = Transform( 17.7313, 0, 17.6239, 0, 3, 0, -17.6239, 0, 17.7313, 0, 0, 0 )
+
+[node name="rock_6" parent="Island" instance=ExtResource( 5 )]
+transform = Transform( -17.7313, 0, -17.6239, 0, 3, 0, 17.6239, 0, -17.7313, 3.8147e-06, 0, 27.2146 )
+
+[node name="bridge" parent="Island" instance=ExtResource( 11 )]
+transform = Transform( -1.33864, 0, 2.68478, 0, 5, 0, -2.68478, 0, -1.33864, 22.8429, 2.96894, 22.9182 )
+
+[node name="tree" parent="Island" instance=ExtResource( 13 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -6.52806, 3.38308, 4.37515 )
+
+[node name="tree2" parent="Island" instance=ExtResource( 13 )]
+transform = Transform( -2.99191, 0, 0.220132, 0, 3, 0, -0.220132, 0, -2.99191, 4.74886, 3.38308, -19.6738 )
+
+[node name="tree3" parent="Island" instance=ExtResource( 13 )]
+transform = Transform( -0.131993, 0, -3.99782, 2.42119, 3.18299, -0.0799388, 3.18126, -2.42251, -0.105033, -16.584, 12.2193, 19.3688 )
+
+[node name="rock_2" parent="Island" instance=ExtResource( 6 )]
+transform = Transform( 15, 0, 0, 0, 15, 0, 0, 0, 15, -15.2514, 1.43864, 32.6228 )

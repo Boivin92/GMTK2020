@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Surroundings/buoy/bouer_Roughness.png" type="Texture" id=1]
 [ext_resource path="res://Surroundings/buoy/bouer_Normal_OpenGL.png" type="Texture" id=2]
@@ -14,7 +14,41 @@ normal_enabled = true
 normal_scale = 1.0
 normal_texture = ExtResource( 2 )
 
+[sub_resource type="Animation" id=2]
+resource_name = "wobble"
+length = 5.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2, 3, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( -26.5987, -6.61668, 14.5247 ), Vector3( 14.9081, -9.25948, -1.62438 ), Vector3( -22.4725, -1.20247, -18.4101 ), Vector3( 17.2317, -16.1922, 11.9546 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:translation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.7, 3.5, 4.5 ),
+"transitions": PoolRealArray( 2.63902, 0.435275, 1.51572, 0.435275 ),
+"update": 0,
+"values": [ Vector3( 0, -0.24244, 0 ), Vector3( 0, 0, 0 ), Vector3( 0, 0.262101, 0 ), Vector3( 0, -0.242, 0 ) ]
+}
+
 [node name="bouer_2" instance=ExtResource( 5 )]
+transform = Transform( 0.988905, 0.0669816, -0.132589, -0.0846565, 0.98756, -0.132506, 0.122064, 0.142261, 0.982274, 0, 0.136925, 0 )
 
 [node name="bouer2" parent="." index="0"]
 material/0 = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]
+autoplay = "wobble"
+anims/wobble = SubResource( 2 )
