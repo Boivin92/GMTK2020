@@ -1,5 +1,9 @@
 extends Control
 
+func _ready():
+	if PlayerInfos.show_tutorials:
+		$Tutoriels/AnimationPlayer.play("Tutorial")
+
 func _process(delta):
 	update_remaining_cargo()
 	update_total_cargo()

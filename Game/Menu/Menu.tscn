@@ -35,16 +35,23 @@ __meta__ = {
 }
 
 [node name="StartGame" type="Button" parent="VBoxContainer"]
-margin_top = 217.0
-margin_right = 128.0
-margin_bottom = 240.0
+margin_top = 174.0
+margin_right = 152.0
+margin_bottom = 197.0
 text = "Start Game"
 
 [node name="Quit" type="Button" parent="VBoxContainer"]
-margin_top = 304.0
-margin_right = 128.0
-margin_bottom = 327.0
+margin_top = 261.0
+margin_right = 152.0
+margin_bottom = 284.0
 text = "Quit"
+
+[node name="CheckBox" type="CheckBox" parent="VBoxContainer"]
+margin_top = 348.0
+margin_right = 152.0
+margin_bottom = 371.0
+pressed = true
+text = "Show tutorials"
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchor_top = 1.0
@@ -66,3 +73,4 @@ text = "Storm at Sea"
 uppercase = true
 [connection signal="pressed" from="VBoxContainer/StartGame" to="." method="_on_StartGame_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_Quit_pressed"]
+[connection signal="toggled" from="VBoxContainer/CheckBox" to="." method="_on_CheckBox_toggled"]
