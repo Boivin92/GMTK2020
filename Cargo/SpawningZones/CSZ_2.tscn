@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Cargo/Box/Box.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Cargo/SpawningZones/Base_CSZ.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Cargo/Crate.gd" type="Script" id=3]
+[ext_resource path="res://Cargo/OilBarrel/OilBarrelGris.tscn" type="PackedScene" id=4]
 
 [node name="CSZ_2" type="Spatial"]
 
@@ -33,3 +35,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.17395, 1.13728, -0.840513 )
 
 [node name="Box9" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.15046, 1.14511, 0.478348 )
+
+[node name="OilBarrelGris" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0612679, -1.25069 )
+script = ExtResource( 3 )
+cargo_value = 75

@@ -1,0 +1,28 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Cargo/SpawningZones/Base_CSZ.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Cargo/Box/Box.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Cargo/Container/ContainerJaune.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Cargo/Container/ContainerBleu.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Cargo/OilBarrel/OilBarrel.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Cargo/OilBarrel/OilBarrelJaune.tscn" type="PackedScene" id=6]
+
+[node name="CSZ_3" instance=ExtResource( 1 )]
+
+[node name="ContainerJaune" parent="." index="1" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.128871, 1.09282 )
+
+[node name="Box" parent="." index="2" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.648996, 0.0694897, 0.0317852 )
+
+[node name="Box2" parent="." index="3" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.29367, 0.0694897, -1.40396 )
+
+[node name="Container" parent="." index="4" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.22017, 1.06635 )
+
+[node name="OilBarrel" parent="." index="5" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.20977 )
+
+[node name="OilBarrelJaune" parent="." index="6" instance=ExtResource( 6 )]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -0.308595, 0.642284, 0 )

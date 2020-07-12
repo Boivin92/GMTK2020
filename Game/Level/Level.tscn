@@ -86,6 +86,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.78614, 9.36066 )
 [node name="Grue" parent="boat/Spatial2" instance=ExtResource( 1 )]
 max_x = 8.0
 max_z = 14.0
+puissance = 20.0
+vitesse_down_up = 2.0
 
 [node name="SpotLight" type="SpotLight" parent="boat"]
 transform = Transform( -0.979445, 0.108115, -0.170289, -4.68576e-08, 0.844225, 0.535989, 0.201711, 0.524972, -0.826872, 3.17265, 9.84154, -2.08678 )

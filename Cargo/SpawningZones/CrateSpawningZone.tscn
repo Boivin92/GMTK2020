@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Cargo/SpawningZones/CrateSpawningZone.gd" type="Script" id=1]
 [ext_resource path="res://Cargo/SpawningZones/CSZ_2.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Cargo/SpawningZones/CSZ_1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Cargo/SpawningZones/CSZ_3.tscn" type="PackedScene" id=4]
 
 [sub_resource type="SpatialMaterial" id=1]
 albedo_color = Color( 0, 1, 0.576471, 1 )
@@ -18,7 +19,7 @@ extents = Vector3( 2, 2, 2 )
 "game",
 ]]
 script = ExtResource( 1 )
-spawning_zones = [ ExtResource( 2 ), ExtResource( 3 ) ]
+spawning_zones = [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ]
 
 [node name="VisualIndicatorOK" type="MeshInstance" parent="."]
 mesh = SubResource( 2 )

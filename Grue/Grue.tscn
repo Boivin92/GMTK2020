@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Grue/Grue.gd" type="Script" id=1]
 [ext_resource path="res://Grue/Zone.png" type="Texture" id=3]
@@ -50,6 +50,18 @@ tracks/2/keys = {
 "method": "set_state"
 } ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite3D2:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
 
 [sub_resource type="Animation" id=3]
 resource_name = "Deactivate"
@@ -94,6 +106,18 @@ tracks/2/keys = {
 "method": "set_state"
 } ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite3D2:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
 
 [sub_resource type="SpatialMaterial" id=4]
 albedo_color = Color( 0.356863, 0.368627, 0.360784, 1 )
@@ -104,6 +128,35 @@ material = SubResource( 4 )
 top_radius = 0.1
 bottom_radius = 0.1
 height = 20.0
+
+[sub_resource type="Animation" id=6]
+resource_name = "spin"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0, 360 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0.6, 0.5, 0.5 ), Vector3( 0.4, 0.5, 0.5 ) ]
+}
 
 [node name="Grue" type="Spatial"]
 script = ExtResource( 1 )
@@ -132,3 +185,13 @@ transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0, 3, 0
 transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0, 13.0011, 0 )
 mesh = SubResource( 5 )
 material/0 = null
+
+[node name="Sprite3D2" type="Sprite3D" parent="."]
+transform = Transform( 0.183736, 0.465683, 0, -0.470018, 0.182042, 0, 0, 0, 0.5, 0, 0, 0 )
+visible = false
+modulate = Color( 0.247059, 0.87451, 0.956863, 1 )
+texture = ExtResource( 3 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite3D2"]
+autoplay = "spin"
+anims/spin = SubResource( 6 )

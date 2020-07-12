@@ -4,6 +4,7 @@ export(float) var vitesse := 10.0
 export(float) var max_x := 10
 export(float) var max_z := 10
 export(float) var puissance := 9.8
+export(float) var vitesse_down_up := 1.0
 
 enum ControlType {
 	Keyboard,
@@ -44,11 +45,11 @@ func process_keyboard() -> Vector3:
 	if Input.is_action_just_pressed("activate"):
 		match state:
 			State.Raised:
-				$AnimationPlayer.play("Activate")
+				$AnimationPlayer.play("Activate", -1, vitesse_down_up)
 			State.Lowered:
-				$AnimationPlayer.play("Deactivate")
+				$AnimationPlayer.play("Deactivate", -1, vitesse_down_up)
 	
-	if state == State.Raised:
+	if true: #state == State.Raised:
 		var move = Vector3()
 		if Input.is_action_pressed("ui_left"):
 			move.x += vitesse
